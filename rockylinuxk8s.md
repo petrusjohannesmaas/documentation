@@ -19,6 +19,7 @@ cat /etc/resolv.conf # you'll see a line like nameserver 8.8.8.8 which is your D
 
 nano /etc/sysconfig/network-scripts/ifcfg-enp0s3 # or eth0 instead of enp0s3 depending on interface
 
+```bash
 TYPE=Ethernet
 BOOTPROTO=static
 DEFROUTE=yes
@@ -30,7 +31,7 @@ IPADDR=192.168.88.xxx  # Replace 'xxx' with your unique IP for each VM
 NETMASK=255.255.255.0
 GATEWAY=192.168.88.1
 DNS1=192.168.88.1
-
+```
 
 ###### Save and reset all VM's network settings and get all node IP's
 systemctl restart NetworkManager
