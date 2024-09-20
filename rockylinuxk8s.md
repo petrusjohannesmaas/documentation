@@ -139,8 +139,9 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
+###### Make sure to add the other nodes to the cluster by running the kubeadm command to join your workers with the hash
 ###### Install Calico ######
-kubectl apply -f https://raw.githubusercontent.com/pro...
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.28.2/manifests/calico.yaml
 
 ###### Label worker nodes ######
 kubectl label node worker01 node-role.kubernetes.io/worker=worker
