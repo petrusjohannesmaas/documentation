@@ -92,6 +92,8 @@ sysctl --system
 
 
 ###### Configure our host file
+vim /etc/hosts
+
 
 
 ###### Install container runtime containerd on all the nodes ######
@@ -103,7 +105,7 @@ dnf install containerd.io -y
 
 ###### Configure containerd ######
 mv /etc/containerd/config.toml /etc/containerd/config.toml.bkp
-containerd config default ＞ /etc/containerd/config.toml
+containerd config default > /etc/containerd/config.toml
 
 vim /etc/containerd/config.toml
 SystemdCgroup = true
